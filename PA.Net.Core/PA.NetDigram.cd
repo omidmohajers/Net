@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PA.Net.Clients.LocalMediaClient" Collapsed="true">
+    <Position X="9.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAACAAAAAAAAAAAAAQAAAAAQAAAAAAAgAIEAAAA=</HashCode>
+      <FileName>Clients\LocalMediaClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PA.Net.Clients.LocalTcpClient" Collapsed="true">
+    <Position X="9.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAWgBAIAACAAAICAACBAAIAAAAQIgAEAgAAEAABAAAA=</HashCode>
+      <FileName>Clients\LocalTcpClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PA.Net.Clients.RemoteMediaClient" Collapsed="true">
+    <Position X="7" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Clients\RemoteMediaClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PA.Net.Clients.RemoteTcpClient" Collapsed="true">
+    <Position X="7" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Clients\RemoteTcpClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PA.Net.Clients.TcpNetClient" Collapsed="true">
+    <Position X="8.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAgACAA4AEAAEAIAIgIKAoAAQAIcIACBAAAAEQ=</HashCode>
+      <FileName>Clients\TcpNetClient.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PA.Crypto.AESChannel" Collapsed="true">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Crypto\AESChannel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PA.Crypto.OpenChannel" Collapsed="true">
+    <Position X="4.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Crypto\OpenChannel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PA.Crypto.RSAChannel" Collapsed="true">
+    <Position X="6.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Crypto\RSAChannel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PA.Crypto.SecureChannel" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACACQABAKQAIQAQAAABABAkkAAIAICCsYAABAGQEEQ=</HashCode>
+      <FileName>Crypto\SecureChannel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PA.Distributer.AudioDistributer" Collapsed="true">
+    <Position X="2" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Distributer\AudioDistributer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PA.Distributer.RealtimeDistributer" Collapsed="true">
+    <Position X="3.25" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AACAAAACASAAAAAAAAAAAAgAAAAAAAAAIAAAAAAAAAQ=</HashCode>
+      <FileName>Distributer\RealtimeDistributer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PA.Distributer.VideoDistributer" Collapsed="true">
+    <Position X="4.25" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Distributer\VideoDistributer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PA.Distributer.WebcamDistributer" Collapsed="true">
+    <Position X="4.25" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Distributer\WebcamDistributer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="PA.Net.Clients.INetClient" Collapsed="true">
+    <Position X="11.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAgACAAwAAAAEAIAIgAKAAAAQAIYAACAAAAAEQ=</HashCode>
+      <FileName>Clients\INetClient.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PA.Crypto.IChannel" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACQAAAAQAAABAAAgkAAIAACCsAAAAAGAEAQ=</HashCode>
+      <FileName>Crypto\IChannel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PA.Distributer.IDistributer" Collapsed="true">
+    <Position X="13.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACASAAAAAAAAAAAAgAAAAAAAAAIAAAAAAAAAQ=</HashCode>
+      <FileName>Distributer\IDistributer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="PA.Crypto.CryptoTypes" Collapsed="true">
+    <Position X="11.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Crypto\CryptoTypes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

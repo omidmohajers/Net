@@ -1,0 +1,25 @@
+D:\Works\WPFs\Video Conference\PA.Net.Core\bin\Debug\PA.Net.Core.dll
+D:\Works\WPFs\Video Conference\PA.Net.Core\bin\Debug\PA.Net.Core.pdb
+D:\Works\WPFs\Video Conference\PA.Net.Core\bin\Debug\PA.Comperssion.Core.dll
+D:\Works\WPFs\Video Conference\PA.Net.Core\bin\Debug\PA.Comperssion.Core.pdb
+D:\Works\WPFs\Video Conference\PA.Net.Core\bin\Debug\PA.Video.Local.dll
+D:\Works\WPFs\Video Conference\PA.Net.Core\bin\Debug\AForge.Video.dll
+D:\Works\WPFs\Video Conference\PA.Net.Core\bin\Debug\AForge.Video.DirectShow.dll
+D:\Works\WPFs\Video Conference\PA.Net.Core\bin\Debug\AForge.Imaging.dll
+D:\Works\WPFs\Video Conference\PA.Net.Core\bin\Debug\AForge.dll
+D:\Works\WPFs\Video Conference\PA.Net.Core\bin\Debug\AForge.Math.dll
+D:\Works\WPFs\Video Conference\PA.Net.Core\bin\Debug\PA.Video.Local.pdb
+D:\Works\WPFs\Video Conference\PA.Net.Core\bin\Debug\AForge.Video.xml
+D:\Works\WPFs\Video Conference\PA.Net.Core\bin\Debug\AForge.Video.DirectShow.xml
+D:\Works\WPFs\Video Conference\PA.Net.Core\bin\Debug\AForge.Imaging.xml
+D:\Works\WPFs\Video Conference\PA.Net.Core\bin\Debug\AForge.xml
+D:\Works\WPFs\Video Conference\PA.Net.Core\bin\Debug\AForge.Math.xml
+D:\Works\WPFs\Video Conference\Build\Debug\PA.Net.Core.dll
+D:\Works\WPFs\Video Conference\Build\Debug\PA.Net.Core.pdb
+D:\Works\WPFs\Video Conference\PA.Net.Core\obj\Debug\PA.Net.Core.csproj.AssemblyReference.cache
+D:\Works\WPFs\Video Conference\PA.Net.Core\obj\Debug\PA.Net.Core.csproj.CoreCompileInputs.cache
+D:\Works\WPFs\Libraries\PA.Net.Core.dll
+D:\Works\WPFs\Libraries\PA.Net.Core.pdb
+D:\Works\WPFs\Video Conference\PA.Net.Core\obj\Debug\PA.Net.Core.csproj.CopyComplete
+D:\Works\WPFs\Video Conference\PA.Net.Core\obj\Debug\PA.Net.Core.dll
+D:\Works\WPFs\Video Conference\PA.Net.Core\obj\Debug\PA.Net.Core.pdb
