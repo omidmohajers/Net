@@ -23,3 +23,10 @@ D:\Works\WPFs\Libraries\PA.Net.Core.pdb
 D:\Works\WPFs\Video Conference\PA.Net.Core\obj\Debug\PA.Net.Core.csproj.CopyComplete
 D:\Works\WPFs\Video Conference\PA.Net.Core\obj\Debug\PA.Net.Core.dll
 D:\Works\WPFs\Video Conference\PA.Net.Core\obj\Debug\PA.Net.Core.pdb
+D:\Works\Git\Market Asistant\Libraries\PA.Net.Core.dll
+D:\Works\Git\Market Asistant\Libraries\PA.Net.Core.pdb
+D:\Works\Git\Market Asistant\Net\PA.Net.Core\obj\Debug\PA.Net.Core.csproj.AssemblyReference.cache
+D:\Works\Git\Market Asistant\Net\PA.Net.Core\obj\Debug\PA.Net.Core.csproj.CoreCompileInputs.cache
+D:\Works\Git\Market Asistant\Net\PA.Net.Core\obj\Debug\PA.Net.Core.csproj.CopyComplete
+D:\Works\Git\Market Asistant\Net\PA.Net.Core\obj\Debug\PA.Net.Core.dll
+D:\Works\Git\Market Asistant\Net\PA.Net.Core\obj\Debug\PA.Net.Core.pdb

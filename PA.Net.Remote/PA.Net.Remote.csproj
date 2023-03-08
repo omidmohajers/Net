@@ -45,8 +45,12 @@
     <Compile Include="RemoteTcpClient.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Git\TradingAnalyzer\PA.Market.Data\PA.Market.Data.csproj">
-      <Project>{FDBBE08E-63D0-4C5C-88E3-62F05F2E3FFA}</Project>
+    <ProjectReference Include="..\..\Comperssion\PA.Comperssion.Core\PA.Comperssion.Core.csproj">
+      <Project>{0fe4d7a7-21d8-4118-9137-0d8139ca4f0b}</Project>
+      <Name>PA.Comperssion.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\StockMarketBase\PA.Market.Data\PA.Market.Data.csproj">
+      <Project>{fdbbe08e-63d0-4c5c-88e3-62f05f2e3ffa}</Project>
       <Name>PA.Market.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\PA.Net.Core\PA.Net.Core.csproj">

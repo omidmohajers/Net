@@ -46,17 +46,17 @@
     <Compile Include="TcpConnection.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\WPFs\Video Conference\PA.Net.Core\PA.Net.Core.csproj">
-      <Project>{3F8ED271-540E-46A5-B3D8-EB6949E81B0A}</Project>
+    <ProjectReference Include="..\..\StockMarketBase\PA.Market.Data\PA.Market.Data.csproj">
+      <Project>{fdbbe08e-63d0-4c5c-88e3-62f05f2e3ffa}</Project>
+      <Name>PA.Market.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PA.Net.Core\PA.Net.Core.csproj">
+      <Project>{3f8ed271-540e-46a5-b3d8-eb6949e81b0a}</Project>
       <Name>PA.Net.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\WPFs\Video Conference\PA.Net.Remote\PA.Net.Remote.csproj">
+    <ProjectReference Include="..\PA.Net.Remote\PA.Net.Remote.csproj">
       <Project>{64eedf0b-b5ea-4724-98fd-5bb09613d12a}</Project>
       <Name>PA.Net.Remote</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PA.Market.Data\PA.Market.Data.csproj">
-      <Project>{FDBBE08E-63D0-4C5C-88E3-62F05F2E3FFA}</Project>
-      <Name>PA.Market.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

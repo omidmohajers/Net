@@ -45,3 +45,10 @@ D:\Works\WPFs\Libraries\PA.Net.Remote.pdb
 D:\Works\WPFs\Video Conference\PA.Net.Remote\obj\Debug\PA.Net.Remote.csproj.CopyComplete
 D:\Works\WPFs\Video Conference\PA.Net.Remote\obj\Debug\PA.Net.Remote.dll
 D:\Works\WPFs\Video Conference\PA.Net.Remote\obj\Debug\PA.Net.Remote.pdb
+D:\Works\Git\Market Asistant\Net\PA.Net.Remote\obj\Debug\PA.Net.Remote.csproj.AssemblyReference.cache
+D:\Works\Git\Market Asistant\Net\PA.Net.Remote\obj\Debug\PA.Net.Remote.csproj.CoreCompileInputs.cache
+D:\Works\Git\Market Asistant\Net\PA.Net.Remote\obj\Debug\PA.Net.Remote.dll
+D:\Works\Git\Market Asistant\Net\PA.Net.Remote\obj\Debug\PA.Net.Remote.pdb
+D:\Works\Git\Market Asistant\Libraries\PA.Net.Remote.dll
+D:\Works\Git\Market Asistant\Libraries\PA.Net.Remote.pdb
+D:\Works\Git\Market Asistant\Net\PA.Net.Remote\obj\Debug\PA.Net.Remote.csproj.CopyComplete

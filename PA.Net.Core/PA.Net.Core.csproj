@@ -71,7 +71,7 @@
     <None Include="PA.NetDigram.cd" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Comperssion\PA.Comperssion.Core\PA.Comperssion.Core.csproj">
+    <ProjectReference Include="..\..\Comperssion\PA.Comperssion.Core\PA.Comperssion.Core.csproj">
       <Project>{0fe4d7a7-21d8-4118-9137-0d8139ca4f0b}</Project>
       <Name>PA.Comperssion.Core</Name>
     </ProjectReference>

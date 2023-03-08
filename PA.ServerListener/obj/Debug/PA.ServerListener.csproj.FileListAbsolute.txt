@@ -19,3 +19,22 @@ D:\Works\Git\TradingAnalyzer\PA.ServerListener\obj\Debug\PA.ServerListener.cspro
 D:\Works\Git\TradingAnalyzer\PA.ServerListener\obj\Debug\PA.ServerListener.csproj.CopyComplete
 D:\Works\Git\TradingAnalyzer\PA.ServerListener\obj\Debug\PA.ServerListener.dll
 D:\Works\Git\TradingAnalyzer\PA.ServerListener\obj\Debug\PA.ServerListener.pdb
+D:\Works\Git\Market Asistant\Net\PA.ServerListener\bin\Debug\PA.ServerListener.dll
+D:\Works\Git\Market Asistant\Net\PA.ServerListener\bin\Debug\PA.ServerListener.pdb
+D:\Works\Git\Market Asistant\Net\PA.ServerListener\bin\Debug\PA.Market.Data.dll
+D:\Works\Git\Market Asistant\Net\PA.ServerListener\bin\Debug\PA.Net.Core.dll
+D:\Works\Git\Market Asistant\Net\PA.ServerListener\bin\Debug\PA.Net.Remote.dll
+D:\Works\Git\Market Asistant\Net\PA.ServerListener\bin\Debug\PropertyValidation.dll
+D:\Works\Git\Market Asistant\Net\PA.ServerListener\bin\Debug\PA.Binance.Shared.dll
+D:\Works\Git\Market Asistant\Net\PA.ServerListener\bin\Debug\Automation.GeneralTable.dll
+D:\Works\Git\Market Asistant\Net\PA.ServerListener\bin\Debug\PA.Comperssion.Core.dll
+D:\Works\Git\Market Asistant\Net\PA.ServerListener\bin\Debug\PA.Market.Data.pdb
+D:\Works\Git\Market Asistant\Net\PA.ServerListener\bin\Debug\PA.Net.Core.pdb
+D:\Works\Git\Market Asistant\Net\PA.ServerListener\bin\Debug\PA.Net.Remote.pdb
+D:\Works\Git\Market Asistant\Net\PA.ServerListener\bin\Debug\PA.Binance.Shared.pdb
+D:\Works\Git\Market Asistant\Net\PA.ServerListener\bin\Debug\PA.Comperssion.Core.pdb
+D:\Works\Git\Market Asistant\Net\PA.ServerListener\obj\Debug\PA.ServerListener.csproj.AssemblyReference.cache
+D:\Works\Git\Market Asistant\Net\PA.ServerListener\obj\Debug\PA.ServerListener.csproj.CoreCompileInputs.cache
+D:\Works\Git\Market Asistant\Net\PA.ServerListener\obj\Debug\PA.ServerListener.csproj.CopyComplete
+D:\Works\Git\Market Asistant\Net\PA.ServerListener\obj\Debug\PA.ServerListener.dll
+D:\Works\Git\Market Asistant\Net\PA.ServerListener\obj\Debug\PA.ServerListener.pdb
