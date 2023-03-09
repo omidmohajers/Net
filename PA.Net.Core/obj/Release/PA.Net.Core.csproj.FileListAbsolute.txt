@@ -1,0 +1,9 @@
+D:\Works\Git\Market Asistant\Net\PA.Net.Core\bin\Release\PA.Net.Core.dll
+D:\Works\Git\Market Asistant\Net\PA.Net.Core\bin\Release\PA.Net.Core.pdb
+D:\Works\Git\Market Asistant\Net\PA.Net.Core\bin\Release\PA.Comperssion.Core.dll
+D:\Works\Git\Market Asistant\Net\PA.Net.Core\bin\Release\PA.Comperssion.Core.pdb
+D:\Works\Git\Market Asistant\Net\PA.Net.Core\obj\Release\PA.Net.Core.csproj.AssemblyReference.cache
+D:\Works\Git\Market Asistant\Net\PA.Net.Core\obj\Release\PA.Net.Core.csproj.CoreCompileInputs.cache
+D:\Works\Git\Market Asistant\Net\PA.Net.Core\obj\Release\PA.Net.Core.csproj.CopyComplete
+D:\Works\Git\Market Asistant\Net\PA.Net.Core\obj\Release\PA.Net.Core.dll
+D:\Works\Git\Market Asistant\Net\PA.Net.Core\obj\Release\PA.Net.Core.pdb

@@ -1,0 +1,17 @@
+D:\Works\Git\Market Asistant\Net\PA.Net.Remote\bin\Release\PA.Net.Remote.dll
+D:\Works\Git\Market Asistant\Net\PA.Net.Remote\bin\Release\PA.Net.Remote.pdb
+D:\Works\Git\Market Asistant\Net\PA.Net.Remote\bin\Release\PA.Comperssion.Core.dll
+D:\Works\Git\Market Asistant\Net\PA.Net.Remote\bin\Release\PA.Market.Data.dll
+D:\Works\Git\Market Asistant\Net\PA.Net.Remote\bin\Release\PA.Net.Core.dll
+D:\Works\Git\Market Asistant\Net\PA.Net.Remote\bin\Release\PropertyValidation.dll
+D:\Works\Git\Market Asistant\Net\PA.Net.Remote\bin\Release\PA.Binance.Shared.dll
+D:\Works\Git\Market Asistant\Net\PA.Net.Remote\bin\Release\Automation.GeneralTable.dll
+D:\Works\Git\Market Asistant\Net\PA.Net.Remote\bin\Release\PA.Comperssion.Core.pdb
+D:\Works\Git\Market Asistant\Net\PA.Net.Remote\bin\Release\PA.Market.Data.pdb
+D:\Works\Git\Market Asistant\Net\PA.Net.Remote\bin\Release\PA.Net.Core.pdb
+D:\Works\Git\Market Asistant\Net\PA.Net.Remote\bin\Release\PA.Binance.Shared.pdb
+D:\Works\Git\Market Asistant\Net\PA.Net.Remote\obj\Release\PA.Net.Remote.csproj.AssemblyReference.cache
+D:\Works\Git\Market Asistant\Net\PA.Net.Remote\obj\Release\PA.Net.Remote.csproj.CoreCompileInputs.cache
+D:\Works\Git\Market Asistant\Net\PA.Net.Remote\obj\Release\PA.Net.Remote.csproj.CopyComplete
+D:\Works\Git\Market Asistant\Net\PA.Net.Remote\obj\Release\PA.Net.Remote.dll
+D:\Works\Git\Market Asistant\Net\PA.Net.Remote\obj\Release\PA.Net.Remote.pdb
