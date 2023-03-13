@@ -20,8 +20,6 @@ namespace PA.Net.Clients
         public event OnStateReceive StatusChanged = null;
         public event OnChackExists CheckingClientExists = null;
         public event OnMessageReceive TextMessageReceived = null;
-        public event OnStartBoardcastVideo BroadcastingVideoStarted = null;
-        public event OnRequestClientList ClientListRequested = null;
         public event OnSayHello SayingHello = null;
         public override IPAddress IP
         {
@@ -79,11 +77,11 @@ namespace PA.Net.Clients
                         TextMessageReceived(this, cln, pak);
                     break;
                 case CommandType.StartBroadcastingVideo:
-                    if (BroadcastingVideoStarted != null)
-                        BroadcastingVideoStarted(this, cln, pak);
+                    //if (BroadcastingVideoStarted != null)
+                    //    BroadcastingVideoStarted(this, cln, pak);
                     break;
                 case Net.Core.CommandType.SendClientList:
-                    BeginRequestingClientList();
+                  // BeginRequestingClientList();
                     break;
                 case Net.Core.CommandType.Hello:
                     if (SayingHello != null)
@@ -100,17 +98,6 @@ namespace PA.Net.Clients
                     //    fileConn.AddFile(ftc);
                     //    break;
             }
-        }
-
-        private void BeginRequestingClientList()
-        {
-            if (ClientListRequested != null)
-                ClientListRequested(this, this);
-        }
-
-        public void EndRequestingClientList(string clients, IPAddress serverIP)
-        {
-            SendClientList(clients, serverIP);
         }
 
         private void BeginCkeckExists()
@@ -147,31 +134,6 @@ namespace PA.Net.Clients
             Package pak = new Package(CommandType.IsNameExists, this.IP, serverIP, isExixsts.ToString(), null);
             pak.SenderIP = serverIP;
             Send(Package.ToByteArray(pak));
-        }
-        public void SendClientList(string val, IPAddress serverIP)
-        {
-            Package pak = new Package(CommandType.SendClientList, this.IP, serverIP, val, null);
-            pak.SenderIP = serverIP;
-            Send(Package.ToByteArray(pak));
-        }
-        public FileTransferController SendFileOrder(long fileID, string fileName, long fileSize, IPAddress serverIP)
-        {
-            FileTransferController ftp = new FileTransferController();
-            ftp.FileID = fileID;
-            ftp.FileSize = fileSize;
-            ftp.FileName = fileName;
-            ftp.TransferSide = TransferSide.UploadToServer;
-            ftp.Data = null;
-            ftp.Start = 0;
-            ftp.End = 0;
-
-
-            Package pak = new Package(CommandType.FileControl, this.IP, serverIP, "", null);
-            pak.Data = FileTransferController.ToByteArray(ftp);
-            pak.SenderIP = serverIP;
-            Send(Package.ToByteArray(pak));
-
-            return ftp;
         }
 
         public override bool Disconnect()
