@@ -85,5 +85,10 @@
         StartBroadcastingAudio,
         UserSoundDeliverd,
         AudioBroadcast,
+        TryLogin,
+        LoginConfermed,
+        LoginFailed,
+        SeverTimeRequest,
+        ServerTime,
     }
 }

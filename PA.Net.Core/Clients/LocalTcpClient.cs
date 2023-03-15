@@ -2,6 +2,7 @@
 using PA.Net.Core;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Net;
 using System.Net.NetworkInformation;
@@ -18,6 +19,7 @@ namespace PA.Net.Clients
     public delegate void OnRequestClientList(object sender, INetClient client);
     public delegate void OnClientListReceived(object sender, string[] clinets);
     public delegate void OnSayHello(object sender, INetClient client);
+    public delegate void OnLoginReceive(object sender, INetClient client,bool succeed);
     public class LocalTcpClient : TcpNetClient
     {
         public event OnUserExistingMessageReceive ExistingMessageReceived = null;
@@ -25,6 +27,7 @@ namespace PA.Net.Clients
         public event OnUserStateReceive UserStateReceived = null;
         public event OnClientListReceived ClientListReceived = null;
         public event OnStartBoardcastVideo VideoBroadcastingMessageReceived = null;
+        public event OnLoginReceive LoginReceived = null;
         public virtual IPAddress ServerIP
         {
             get
@@ -69,11 +72,16 @@ namespace PA.Net.Clients
             pak.SenderIP = IP;
             Send(Package.ToByteArray(pak));
         }
-
-        public virtual void CheckUserExists()
+        public virtual void TryLogin(string username, string password) 
         {
-            //Inform to all clients that this client is now online.
-            Package pak = new Package(CommandType.IsNameExists, IPAddress.Broadcast, IP, IP.ToString(), null);
+            Package pak = new Package(CommandType.TryLogin, ServerIP, IP, String.Format("{0}|{1}", username, password), null);
+            pak.UserID = UserID;
+            pak.SenderIP = IP;
+            Send(Package.ToByteArray(pak));
+        }
+        public virtual void RequestServerTime(long marketID)
+        {
+            Package pak = new Package(CommandType.SeverTimeRequest, ServerIP, IP, marketID.ToString(), null);
             pak.UserID = UserID;
             pak.SenderIP = IP;
             Send(Package.ToByteArray(pak));
@@ -82,18 +90,6 @@ namespace PA.Net.Clients
         public virtual void SayGoodbye()
         {
             Package pak = new Package(CommandType.Goodbye, IPAddress.Broadcast, IP, "0:offline", null);
-            pak.UserID = UserID;
-            pak.SenderIP = IP;
-            Send(Package.ToByteArray(pak));
-        }
-
-        public void SendState()
-        {
-            ContactStatus stat = new ContactStatus();
-            stat.Type = StatusType.Online;
-            stat.Description = "برخط";
-            String state = stat.ToString();
-            Package pak = new Package(CommandType.BroadcastState, IPAddress.Broadcast, IP, state, null);
             pak.UserID = UserID;
             pak.SenderIP = IP;
             Send(Package.ToByteArray(pak));
@@ -250,6 +246,24 @@ namespace PA.Net.Clients
                     if (VideoBroadcastingMessageReceived != null)
                         VideoBroadcastingMessageReceived(this, this, pak);
                     break;
+                case CommandType.LoginConfermed:
+                    string msg  = UTF8Encoding.UTF8.GetString(pak.Data);
+                    if (msg != null)
+                    {
+                        string[] loginInfo = msg.Split(new char[] { '|' });
+                        if (loginInfo.Length > 0)
+                        {
+                            UserID = long.Parse(loginInfo[0]);
+                            LoginReceived?.Invoke(this, this, true);
+                        }
+                    }
+                    break;
+                case CommandType.LoginFailed:
+                    LoginReceived?.Invoke(this, this, false);
+                    break;
+                case CommandType.ServerTime:
+                    break;
+
             }
         }
 
