@@ -23,7 +23,7 @@ namespace PA.Net.Core
         public IPAddress SenderIP { get; set; }
         public CommandType CommandType { get; set; }
         public IPAddress Target { get; set; }
-        public byte[] Data { get; set; }
+        public object Data { get; set; }
 
         public DateTime Time
         {

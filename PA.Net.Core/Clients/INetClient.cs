@@ -7,6 +7,7 @@
 
 using PA.Crypto;
 using PA.Net.Core;
+using PA.Net.Core.Clients;
 using System;
 using System.Net;
 using System.Net.Sockets;
@@ -24,6 +25,7 @@ namespace PA.Net.Clients
         TcpClient Client { get; set; }
         IChannel Channel { get; }
         CryptoTypes ChannelType { get; }
+        ClientState State { get; }
         bool Connect(IPAddress serverIP, int port,CryptoTypes channelType);
         bool Disconnect();
         void Init();

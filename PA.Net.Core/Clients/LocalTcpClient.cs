@@ -1,5 +1,6 @@
 ﻿using PA.Crypto;
 using PA.Net.Core;
+using PA.Net.Core.Clients;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -19,7 +20,6 @@ namespace PA.Net.Clients
     public delegate void OnRequestClientList(object sender, INetClient client);
     public delegate void OnClientListReceived(object sender, string[] clinets);
     public delegate void OnSayHello(object sender, INetClient client);
-    public delegate void OnLoginReceive(object sender, INetClient client,bool succeed);
     public class LocalTcpClient : TcpNetClient
     {
         public event OnUserExistingMessageReceive ExistingMessageReceived = null;
@@ -27,7 +27,6 @@ namespace PA.Net.Clients
         public event OnUserStateReceive UserStateReceived = null;
         public event OnClientListReceived ClientListReceived = null;
         public event OnStartBoardcastVideo VideoBroadcastingMessageReceived = null;
-        public event OnLoginReceive LoginReceived = null;
         public virtual IPAddress ServerIP
         {
             get
@@ -103,6 +102,7 @@ namespace PA.Net.Clients
         }
         public override bool Connect(IPAddress serverIP, int port, CryptoTypes channelType)
         {
+            State = Core.Clients.ClientState.Connecting;
             try
             {
                 client = new System.Net.Sockets.TcpClient();
@@ -152,6 +152,7 @@ namespace PA.Net.Clients
         {
             if (client != null && client.Connected)
             {
+                State = ClientState.Disconnecting; 
                 try
                 {
                     SayGoodbye();
@@ -214,6 +215,7 @@ namespace PA.Net.Clients
 
         private void Channel_DataReceived(object sender, INetClient client, byte[] data)
         {
+            State = ClientState.DataReceive;
             Package pak = Package.FromByteArray(data);
             switch (pak.CommandType)
             {
@@ -232,7 +234,7 @@ namespace PA.Net.Clients
                     GetClientList(pak);
                     break;
                 case (CommandType.Goodbye):
-                    ContactStatus cs = ContactStatus.FromBytes(pak.Data);
+                    ContactStatus cs = ContactStatus.FromBytes((byte[])pak.Data);
                     if (UserStateReceived != null)
                         UserStateReceived(this, pak.UserID, pak.SenderIP, cs);
                     break;
@@ -246,30 +248,14 @@ namespace PA.Net.Clients
                     if (VideoBroadcastingMessageReceived != null)
                         VideoBroadcastingMessageReceived(this, this, pak);
                     break;
-                case CommandType.LoginConfermed:
-                    string msg  = UTF8Encoding.UTF8.GetString(pak.Data);
-                    if (msg != null)
-                    {
-                        string[] loginInfo = msg.Split(new char[] { '|' });
-                        if (loginInfo.Length > 0)
-                        {
-                            UserID = long.Parse(loginInfo[0]);
-                            LoginReceived?.Invoke(this, this, true);
-                        }
-                    }
-                    break;
-                case CommandType.LoginFailed:
-                    LoginReceived?.Invoke(this, this, false);
-                    break;
-                case CommandType.ServerTime:
-                    break;
-
+                
             }
+            State = ClientState.Idle;
         }
 
         private void GetClientList(Package pak)
         {
-            string val = Encoding.UTF8.GetString(pak.Data);
+            string val = Encoding.UTF8.GetString((byte[])pak.Data);
             StringReader reader = new StringReader(val);
             string line = reader.ReadLine();
             List<String> result = new List<string>();
@@ -285,12 +271,12 @@ namespace PA.Net.Clients
         private void SendStatus(Package pak)
         {
             if (UserStateReceived != null)
-                UserStateReceived(this, pak.UserID, pak.SenderIP, ContactStatus.FromBytes(pak.Data));
+                UserStateReceived(this, pak.UserID, pak.SenderIP, ContactStatus.FromBytes((byte[])pak.Data));
         }
 
         private void CompileUserExisting(Package pak)
         {
-            string s = System.Text.Encoding.UTF8.GetString(pak.Data);
+            string s = System.Text.Encoding.UTF8.GetString((byte[])pak.Data);
             bool exists = bool.Parse(s);
             if (ExistingMessageReceived != null)
                 ExistingMessageReceived(this, this, exists);
@@ -298,6 +284,11 @@ namespace PA.Net.Clients
             {
                 Disconnect();
             }
+        }
+
+        public void SetState(ClientState state)
+        {
+            State = state;
         }
         //--------------------------------------------------------------------------------------
         #endregion Channel Events

@@ -10,11 +10,13 @@ using System.Net.Sockets;
 using PA.Crypto;
 using PA.Net.Collections;
 using PA.Net.Core;
+using PA.Net.Core.Clients;
 
 namespace PA.Net.Clients
 {
     public class TcpNetClient : INetClient, System.IDisposable
     {
+        protected ClientState state;
         protected TcpClient client;
         protected IChannel channel;
         protected ReportCollection Log = new ReportCollection();
@@ -24,6 +26,7 @@ namespace PA.Net.Clients
         public event EventHandler ConnectionSuceeded;
         public event EventHandler ConnectionFailed;
         public event ExceptionReportHandler ExceptionReported;
+        public event EventHandler<ClientState> StateChanged;
 
         public int ID
         {
@@ -90,6 +93,16 @@ namespace PA.Net.Clients
             }
         }
         public CryptoTypes ChannelType { get; protected set; }
+        public ClientState State
+        {
+            get => state;
+            protected set
+            {
+                state = value;
+                StateChanged?.Invoke(this, state);
+            }
+        }
+
         public TcpNetClient()
         {
             client = new TcpClient();
@@ -143,6 +156,7 @@ namespace PA.Net.Clients
         }
         public bool Send(byte[] pocket)
         {
+            State = ClientState.Sending;
             try
             {
                 channel.SendBuffer.SetBuffer(pocket);
@@ -153,10 +167,15 @@ namespace PA.Net.Clients
                 RaiseExceptionReported(ex);
                 return false;
             }
+            finally
+            {
+                State= ClientState.Idle;
+            }
         }
 
         private void RaiseExceptionReported(Exception ex)
         {
+            state= ClientState.Error;
             if (ExceptionReported != null)
                 ExceptionReported(this, ex);
         }
@@ -165,6 +184,7 @@ namespace PA.Net.Clients
         {
             if (DisconnectSuceeded != null)
                 DisconnectSuceeded(this, EventArgs.Empty);
+            State= ClientState.Disconnected;
             Log.Add(ReportType.Event, ClientName, "Disconnected.");
         }
         public void RaiseDisconnectFaild()
@@ -177,12 +197,14 @@ namespace PA.Net.Clients
         {
             if (ConnectionSuceeded != null)
                 ConnectionSuceeded(this, EventArgs.Empty);
+            State= ClientState.Connected;
             Log.Add(ReportType.Event, ClientName, "Connected.");
         }
         public void RaiseConnectionFailed()
         {
             if (ConnectionFailed != null)
                 ConnectionFailed(this, EventArgs.Empty);
+            State = ClientState.Disconnected;
             Log.Add(ReportType.Error, ClientName, "Connect Faild.");
         }
 

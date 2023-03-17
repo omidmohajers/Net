@@ -114,7 +114,7 @@ namespace PA.Net.Clients
         private void UpdateStatus(Package pak)
         {
             UserID = pak.UserID;
-            Status = ContactStatus.FromBytes(pak.Data);
+            Status = ContactStatus.FromBytes((byte[])pak.Data);
             if (UserProfile == null)
             {
                 Account user = AccountDataProvider.Get(pak.UserID);
