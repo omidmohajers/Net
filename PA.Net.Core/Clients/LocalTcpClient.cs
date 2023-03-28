@@ -80,9 +80,20 @@ namespace PA.Net.Clients
         }
         public virtual void RequestServerTime(long marketID)
         {
-            Package pak = new Package(CommandType.SeverTimeRequest, ServerIP, IP, marketID.ToString(), null);
+            Package pak = new Package(CommandType.SeverTimeRequest, ServerIP, IP, null, null);
+            pak.Data= marketID;
             pak.UserID = UserID;
             pak.SenderIP = IP;
+            Send(Package.ToByteArray(pak));
+        }
+        public virtual void RequestSymbols(long marketID)
+        {
+            Package pak = new Package(CommandType.SymbolListRequest, ServerIP, IP, null, null)
+            {
+                Data = marketID,
+                UserID = UserID,
+                SenderIP = IP
+            };
             Send(Package.ToByteArray(pak));
         }
 
@@ -289,6 +300,14 @@ namespace PA.Net.Clients
         public void SetState(ClientState state)
         {
             State = state;
+        }
+
+        public void RequestMarketList()
+        {
+            Package pak = new Package(CommandType.MarketListRequest, ServerIP, IP, null, null);
+            pak.UserID = UserID;
+            pak.SenderIP = IP;
+            Send(Package.ToByteArray(pak));
         }
         //--------------------------------------------------------------------------------------
         #endregion Channel Events

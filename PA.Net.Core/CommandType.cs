@@ -90,5 +90,9 @@
         LoginFailed,
         SeverTimeRequest,
         ServerTime,
+        MarketListRequest,
+        MarketListReceived,
+        SymbolListRequest,
+        SymbolListReceived,
     }
 }
