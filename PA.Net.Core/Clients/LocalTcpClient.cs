@@ -3,7 +3,6 @@ using PA.Net.Core;
 using PA.Net.Core.Clients;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
 using System.Net;
 using System.Net.NetworkInformation;

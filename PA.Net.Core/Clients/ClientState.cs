@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PA.Net.Core.Clients
+﻿namespace PA.Net.Core.Clients
 {
     public enum ClientState
     {
